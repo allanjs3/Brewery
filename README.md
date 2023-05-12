@@ -1,51 +1,24 @@
-# Projeto de Transformação e Agregação de Dados de Cervejarias
+<h1>Projeto de Transformação e Agregação de Dados de Cervejarias</h1>
 
-Este projeto consiste em uma pipeline de transformação e agregação de dados de cervejarias, que visa processar e organizar os dados em diferentes camadas. A camada Bronze contém os dados brutos e não tratados, a camada Silver armazena os dados transformados em um formato de armazenamento colunar, como Parquet ou Delta, particionados por localização da cervejaria, e a camada Gold cria uma visualização agregada com a quantidade de lojas por tipo e localização.
+<p>Este projeto consiste em uma pipeline de transformação e agregação de dados de cervejarias, que visa processar e organizar os dados em diferentes camadas.</p>
 
-## Descrição
+<h2>Camada Bronze</h2>
+<p>A camada Bronze contém os dados brutos e não tratados. Nessa etapa, os dados são adquiridos a partir da API <a href="https://www.openbrewerydb.org/">OpenBreweryDB</a> e persistidos em seu formato nativo.</p>
 
-Uma descrição mais detalhada do projeto, incluindo o contexto e o objetivo do projeto.
+<h2>Camada Silver</h2>
+<p>Na camada Silver, os dados da camada Bronze são transformados e armazenados em um formato de armazenamento colunar, como Parquet ou Delta. Além disso, eles são particionados com base na localização da cervejaria. Essa transformação visa otimizar o desempenho e a eficiência do acesso aos dados.</p>
 
-## Funcionalidades
+<h2>Camada Gold</h2>
+<p>A camada Gold é responsável por criar uma visualização agregada dos dados. Nessa etapa, é gerada uma visualização que apresenta a quantidade de lojas de cervejarias por tipo e localização. Essa agregação fornece uma visão sumarizada e mais intuitiva dos dados.</p>
 
-- Funcionalidade 1: Descrição breve da funcionalidade 1.
-- Funcionalidade 2: Descrição breve da funcionalidade 2.
-- ...
+<p>Essa pipeline de transformação e agregação de dados de cervejarias possibilita uma análise mais eficiente e facilita a obtenção de informações relevantes sobre as cervejarias em diferentes níveis de granularidade.</p>
 
-## Tecnologias Utilizadas
+<h2>Tecnologias Utilizadas</h2>
 
-- Apache Airflow: Framework utilizado para construir e gerenciar fluxos de trabalho.
-- HTML: Utilizado para aplicar formatação especial ao README.md.
-- API: OpenBreweryDB API (https://www.openbrewerydb.org/): API utilizada para obter informações sobre cervejarias.
+<ul>
+  <li>Apache Airflow: Framework utilizado para construir e gerenciar a pipeline de transformação e agregação de dados.</li>
+  <li>Docker: Plataforma de virtualização que permite executar aplicativos em contêineres isolados.</li>
+  <li>HTML: Utilizado para aplicar formatação especial ao README.md.</li>
+  <li>API: <a href="https://www.openbrewerydb.org/">OpenBreweryDB API</a>: API utilizada para obter informações sobre cervejarias.</li>
+</ul>
 
-## Instalação
-
-1. Clone o repositório: `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
-2. Entre no diretório do projeto: `cd nome-do-repositorio`
-3. Instale as dependências: `pip install -r requirements.txt`
-
-## Configuração
-
-1. Faça uma cópia do arquivo `.env.example` e renomeie para `.env`.
-2. Preencha as variáveis de ambiente necessárias no arquivo `.env`.
-
-## Uso
-
-1. Inicie o Apache Airflow: `airflow webserver -p 8080` (por exemplo).
-2. Acesse o Airflow UI no navegador.
-3. Configure e execute os fluxos de trabalho para obter informações da OpenBreweryDB API.
-4. ...
-
-## Contribuição
-
-Se você quiser contribuir para este projeto, siga as etapas abaixo:
-
-1. Faça um fork do repositório.
-2. Crie um novo branch: `git checkout -b minha-branch`
-3. Faça as modificações necessárias e commit: `git commit -am 'Adicionei uma nova funcionalidade'`
-4. Envie as alterações para o branch: `git push origin minha-branch`
-5. Crie um novo pull request.
-
-## Licença
-
-Este projeto está licenciado sob a [Licença XYZ](link-para-a-licenca).
