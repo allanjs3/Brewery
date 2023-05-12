@@ -1,6 +1,6 @@
-# Brewery
+# Projeto de Transformação e Agregação de Dados de Cervejarias
 
-Breve descrição do projeto em uma ou duas frases.
+Este projeto consiste em uma pipeline de transformação e agregação de dados de cervejarias, que visa processar e organizar os dados em diferentes camadas. A camada Bronze contém os dados brutos e não tratados, a camada Silver armazena os dados transformados em um formato de armazenamento colunar, como Parquet ou Delta, particionados por localização da cervejaria, e a camada Gold cria uma visualização agregada com a quantidade de lojas por tipo e localização.
 
 ## Descrição
 
